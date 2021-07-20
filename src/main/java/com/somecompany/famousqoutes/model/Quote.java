@@ -25,7 +25,6 @@ import lombok.experimental.SuperBuilder;
     uniqueConstraints = {@UniqueConstraint(columnNames = {"content", "author_id"})})
 public class Quote extends BaseEntity {
 
-//  @Lob
   @NotEmpty
   private String content;
 
