@@ -16,7 +16,7 @@ Endpoints are not secured by Spring Security nor by certificates, datasource use
 
 ### REST API DOCS:
 
-###***Quote Controller***
+###Quote Controller
 
 ### findAllUsingGET
 
@@ -164,8 +164,6 @@ This operation does not require authentication
 ### updateUsingPUT
 
 <a id="opIdupdateUsingPUT"></a>
-
-> Code samples
 
 ```shell
 # You can also use wget

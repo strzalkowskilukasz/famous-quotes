@@ -13,8 +13,8 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @SuperBuilder
+@NoArgsConstructor
 @ToString(callSuper = true)
 public class Author extends BaseEntity {
 
