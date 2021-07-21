@@ -18,6 +18,6 @@ public class AuthorJson {
 
   private String firstName;
 
-  @NotEmpty
+  @NotEmpty(message = "Nazwisko autora jest wymagane")
   private String lastName;
 }
