@@ -14,7 +14,7 @@ public class QuoteModelAssembler implements RepresentationModelAssembler<QuoteJs
 
   @Override
   public EntityModel<QuoteJson> toModel(QuoteJson quoteJson) {
-    return new EntityModel<>(quoteJson,
+    return EntityModel.of(quoteJson,
         linkTo(methodOn(QuoteController.class).findById(quoteJson.getId())).withSelfRel(),
         linkTo(methodOn(QuoteController.class).findAll()).withRel("quotes"));
   }

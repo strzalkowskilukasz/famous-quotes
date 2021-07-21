@@ -1,15 +1,16 @@
 spring:
+  sql:
+    init:
+      data-locations: classpath:sql/init-quotes.sql
   datasource:
-    url: jdbc:h2:mem:fkdb
+    url: jdbc:h2:mem:quotes
     driverClassName: org.h2.Driver
-    data: classpath:sql/init-quotes.sql
-    initialization-mode: always
     username: admin
-    password: pa$$W0rd
-    sql-script-encoding: UTF-8
+    password: pa$$w0rd
 
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
     show-sql: false
   h2:
     console:

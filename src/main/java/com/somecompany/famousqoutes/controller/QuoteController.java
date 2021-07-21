@@ -3,9 +3,6 @@ package com.somecompany.famousqoutes.controller;
 import com.somecompany.famousqoutes.dto.QuoteJson;
 import com.somecompany.famousqoutes.dto.QuoteMapper;
 import com.somecompany.famousqoutes.service.QuoteService;
-import java.util.List;
-import java.util.stream.Collectors;
-import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -19,6 +16,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -42,7 +43,7 @@ public class QuoteController {
         .map(assembler::toModel)
         .collect(Collectors.toList());
 
-    return new CollectionModel<>(quotesJson,
+    return CollectionModel.of(quotesJson,
         linkTo(methodOn(QuoteController.class).findAll()).withSelfRel());
   }
 
