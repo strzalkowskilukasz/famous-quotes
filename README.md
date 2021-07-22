@@ -1,6 +1,6 @@
 # *FAMOUS QUOTES REST API*
 
-### This repository is for an example RESTful API written in Java and Spring Boot 2 prepared for the purpose of some recruitment process.
+### This repository is an example of RESTful API written in Java and Spring Boot and was prepared for the purpose of some recruitment process.
 ### It enables to find add, update and delete quotes of famos or infamous people.
 
 Endpoints are not secured by Spring Security nor by certificates, datasource used for this demonstration project is embedded H2 database.
